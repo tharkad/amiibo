@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!-- Your app title -->
+    <title>Amiibo Tracker</title>
+    <!-- Path to Framework7 Library CSS-->
+    <link rel="stylesheet" href="css/framework7.min.css">
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="css/my-app.css">
+  </head>
+  <body>
+    <!-- Status bar overlay for full screen mode (PhoneGap) -->
+    <div class="statusbar-overlay"></div>
+    <!-- Panels overlay-->
+    <div class="panel-overlay"></div>
+    <!-- Left panel with reveal effect-->
+    <div class="panel panel-left panel-reveal">
+    	<div class="content-block">
+            <div class="page-content">
+ 				<div class="list-block">
+				  <ul>
+					<li>
+					  <a href="about.html" class="close-panel item-link item-content">
+						<div class="item-inner">
+						  <div class="item-title">About Amiibo Tracker</div>
+						  <div class="item-after"></div>
+						</div>
+					  </a>
+					</li>
+				  </ul>
+				</div>
+			</div>
+    	</div>
+    </div>
+    <!-- Views -->
+    <div class="views">
+      <!-- Your main view, should have "view-main" class -->
+      <div class="view view-main">
+        <!-- Top Navbar-->
+        <div class="navbar">
+          <div class="navbar-inner">
+            <!-- We need cool sliding animation on title element, so we have additional "sliding" class -->
+            <div class="center sliding">Amiibo Tracker</div>
+            <div class="right">
+              <!-- 
+                Right link contains only icon - additional "icon-only" class
+                Additional "open-panel" class tells app to open panel when we click on this link
+              -->
+              <a href="#" class="link icon-only open-panel"><i class="icon icon-bars"></i></a>
+            </div>
+          </div>
+        </div>
+        <!-- Pages container, because we use fixed-through navbar and toolbar, it has additional appropriate classes-->
+        <div class="pages navbar-through toolbar-through">
+          <!-- Page, "data-page" contains page name -->
+          <div data-page="index" class="page">
+            <!-- Scrollable page content -->
+            <div class="page-content">
+				<div class="content-block-title">Super Smash Bros. Wave 1 - 11/21/2014</div>
+				<form id="super-smash-bros-wave-1-form" class="list-block store-data">
+				  <ul>
+					<li>
+						<label class="label-checkbox item-content">
+							<input type="checkbox" name="donkey-kong" value="donkey-kong">
+							<div class="item-media"><i class="icon icon-form-checkbox"></i><i class="icon icon-donkey-kong"></i></div>
+							<div class="item-inner">
+							  <div class="item-title">Donkey Kong</div>
+							  <div class="item-after"></div>
+							</div>
+						</label>
+					</li>
+					<li>
+						<label class="label-checkbox item-content">
+							<input type="checkbox" name="fox" value="fox">
+							<div class="item-media"><i class="icon icon-form-checkbox"></i><i class="icon icon-fox"></i></div>
+							<div class="item-inner">
+							  <div class="item-title">Fox</div>
+							  <div class="item-after"></div>
+							</div>
+						</label>
+					</li>
+					<li>
+						<label class="label-checkbox item-content">
+							<input type="checkbox" name="kirby" value="kirby">
+							<div class="item-media"><i class="icon icon-form-checkbox"></i><i class="icon icon-kirby"></i></div>
+							<div class="item-inner">
+							  <div class="item-title">Kirby</div>
+							  <div class="item-after"></div>
+							</div>
+						</label>
+					</li>
+					<li>
+						<label class="label-checkbox item-content">
+							<input type="checkbox" name="link" value="link">
+							<div class="item-media"><i class="icon icon-form-checkbox"></i><i class="icon icon-link"></i></div>
+							<div class="item-inner">
+							  <div class="item-title">Link</div>
+							  <div class="item-after"></div>
+							</div>
+						</label>
+					</li>
+					<li>
+						<label class="label-checkbox item-content">
+							<input type="checkbox" name="mario" value="mario">
+							<div class="item-media"><i class="icon icon-form-checkbox"></i><i class="icon icon-mario"></i></div>
+							<div class="item-inner">
+							  <div class="item-title">Mario</div>
+							  <div class="item-after"></div>
+							</div>
+						</label>
+					</li>
+					<li>
+						<label class="label-checkbox item-content">
+							<input type="checkbox" name="marth" value="marth">
+							<div class="item-media"><i class="icon icon-form-checkbox"></i><i class="icon icon-marth"></i></div>
+							<div class="item-inner">
+							  <div class="item-title">Marth</div>
+							  <div class="item-after"></div>
+							</div>
+						</label>
+					</li>
+					<li>
+						<label class="label-checkbox item-content">
+							<input type="checkbox" name="peach" value="peach">
+							<div class="item-media"><i class="icon icon-form-checkbox"></i><i class="icon icon-peach"></i></div>
+							<div class="item-inner">
+							  <div class="item-title">Peach</div>
+							  <div class="item-after"></div>
+							</div>
+						</label>
+					</li>
+					<li>
+						<label class="label-checkbox item-content">
+							<input type="checkbox" name="pikachu" value="pikachu">
+							<div class="item-media"><i class="icon icon-form-checkbox"></i><i class="icon icon-pikachu"></i></div>
+							<div class="item-inner">
+							  <div class="item-title">Pikachu</div>
+							  <div class="item-after"></div>
+							</div>
+						</label>
+					</li>
+					<li>
+						<label class="label-checkbox item-content">
+							<input type="checkbox" name="samus" value="samus">
+							<div class="item-media"><i class="icon icon-form-checkbox"></i><i class="icon icon-samus"></i></div>
+							<div class="item-inner">
+							  <div class="item-title">Samus</div>
+							  <div class="item-after"></div>
+							</div>
+						</label>
+					</li>
+					<li>
+						<label class="label-checkbox item-content">
+							<input type="checkbox" name="villager" value="villager">
+							<div class="item-media"><i class="icon icon-form-checkbox"></i><i class="icon icon-villager"></i></div>
+							<div class="item-inner">
+							  <div class="item-title">Villager</div>
+							  <div class="item-after"></div>
+							</div>
+						</label>
+					</li>
+					<li>
+						<label class="label-checkbox item-content">
+							<input type="checkbox" name="wii-fit-trainer" value="wii-fit-trainer">
+							<div class="item-media"><i class="icon icon-form-checkbox"></i><i class="icon icon-wii-fit-trainer"></i></div>
+							<div class="item-inner">
+							  <div class="item-title">Wii Fit Trainer</div>
+							  <div class="item-after"></div>
+							</div>
+						</label>
+					</li>
+					<li>
+						<label class="label-checkbox item-content">
+							<input type="checkbox" name="yoshi" value="yoshi">
+							<div class="item-media"><i class="icon icon-form-checkbox"></i><i class="icon icon-yoshi"></i></div>
+							<div class="item-inner">
+							  <div class="item-title">Yoshi</div>
+							  <div class="item-after"></div>
+							</div>
+						</label>
+					</li>
+				  </ul>
+				</form>
+				
+				<div class="content-block-title">Super Smash Bros. Wave 2 - 12/2014</div>
+				<form id="super-smash-bros-wave-2-form" class="list-block store-data">
+				  <ul>
+					<li>
+						<label class="label-checkbox item-content">
+							<input type="checkbox" name="captain-falcon" value="captain-falcon">
+							<div class="item-media"><i class="icon icon-form-checkbox"></i><i class="icon icon-captain-falcon"></i></div>
+							<div class="item-inner">
+							  <div class="item-title">Captain Falcon</div>
+							  <div class="item-after"></div>
+							</div>
+						</label>
+					</li>
+					<li>
+						<label class="label-checkbox item-content">
+							<input type="checkbox" name="diddy-kong" value="diddy-kong">
+							<div class="item-media"><i class="icon icon-form-checkbox"></i><i class="icon icon-diddy-kong"></i></div>
+							<div class="item-inner">
+							  <div class="item-title">Diddy Kong</div>
+							  <div class="item-after"></div>
+							</div>
+						</label>
+					</li>
+					<li>
+						<label class="label-checkbox item-content">
+							<input type="checkbox" name="little-mac" value="little-mac">
+							<div class="item-media"><i class="icon icon-form-checkbox"></i><i class="icon icon-little-mac"></i></div>
+							<div class="item-inner">
+							  <div class="item-title">Little Mac</div>
+							  <div class="item-after"></div>
+							</div>
+						</label>
+					</li>
+					<li>
+						<label class="label-checkbox item-content">
+							<input type="checkbox" name="luigi" value="luigi">
+							<div class="item-media"><i class="icon icon-form-checkbox"></i><i class="icon icon-luigi"></i></div>
+							<div class="item-inner">
+							  <div class="item-title">Luigi</div>
+							  <div class="item-after"></div>
+							</div>
+						</label>
+					</li>
+					<li>
+						<label class="label-checkbox item-content">
+							<input type="checkbox" name="pit" value="pit">
+							<div class="item-media"><i class="icon icon-form-checkbox"></i><i class="icon icon-pit"></i></div>
+							<div class="item-inner">
+							  <div class="item-title">Pit</div>
+							  <div class="item-after"></div>
+							</div>
+						</label>
+					</li>
+					<li>
+						<label class="label-checkbox item-content">
+							<input type="checkbox" name="zelda" value="zelda">
+							<div class="item-media"><i class="icon icon-form-checkbox"></i><i class="icon icon-zelda"></i></div>
+							<div class="item-inner">
+							  <div class="item-title">Zelda</div>
+							  <div class="item-after"></div>
+							</div>
+						</label>
+					</li>
+				  </ul>
+				</form>
+				
+				<div class="content-block-title">Super Smash Bros. Wave 3 - 2/2015</div>
+				<form id="super-smash-bros-wave-3-form" class="list-block store-data">
+				  <ul>
+					<li>
+						<label class="label-checkbox item-content">
+							<input type="checkbox" name="bowser" value="bowser">
+							<div class="item-media"><i class="icon icon-form-checkbox"></i><i class="icon icon-bowser"></i></div>
+							<div class="item-inner">
+							  <div class="item-title">Bowser</div>
+							  <div class="item-after"></div>
+							</div>
+						</label>
+					</li>
+					<li>
+						<label class="label-checkbox item-content">
+							<input type="checkbox" name="ike" value="ike">
+							<div class="item-media"><i class="icon icon-form-checkbox"></i><i class="icon icon-ike"></i></div>
+							<div class="item-inner">
+							  <div class="item-title">Ike</div>
+							  <div class="item-after"></div>
+							</div>
+						</label>
+					</li>
+					<li>
+						<label class="label-checkbox item-content">
+							<input type="checkbox" name="king-dedede" value="king-dedede">
+							<div class="item-media"><i class="icon icon-form-checkbox"></i><i class="icon icon-king-dedede"></i></div>
+							<div class="item-inner">
+							  <div class="item-title">King Dedede</div>
+							  <div class="item-after"></div>
+							</div>
+						</label>
+					</li>
+					<li>
+						<label class="label-checkbox item-content">
+							<input type="checkbox" name="lucario" value="lucario">
+							<div class="item-media"><i class="icon icon-form-checkbox"></i><i class="icon icon-lucario"></i></div>
+							<div class="item-inner">
+							  <div class="item-title">Lucario</div>
+							  <div class="item-after"></div>
+							</div>
+						</label>
+					</li>
+					<li>
+						<label class="label-checkbox item-content">
+							<input type="checkbox" name="mega-man" value="mega-man">
+							<div class="item-media"><i class="icon icon-form-checkbox"></i><i class="icon icon-mega-man"></i></div>
+							<div class="item-inner">
+							  <div class="item-title">Mega Man</div>
+							  <div class="item-after"></div>
+							</div>
+						</label>
+					</li>
+					<li>
+						<label class="label-checkbox item-content">
+							<input type="checkbox" name="meta-knight" value="meta-knight">
+							<div class="item-media"><i class="icon icon-form-checkbox"></i><i class="icon icon-meta-knight"></i></div>
+							<div class="item-inner">
+							  <div class="item-title">Meta Knight</div>
+							  <div class="item-after"></div>
+							</div>
+						</label>
+					</li>
+					<li>
+						<label class="label-checkbox item-content">
+							<input type="checkbox" name="rosalina-and-luma" value="rosalina-and-luma">
+							<div class="item-media"><i class="icon icon-form-checkbox"></i><i class="icon icon-rosalina-and-luma"></i></div>
+							<div class="item-inner">
+							  <div class="item-title">Rosalina and Luma</div>
+							  <div class="item-after"></div>
+							</div>
+						</label>
+					</li>
+					<li>
+						<label class="label-checkbox item-content">
+							<input type="checkbox" name="sheik" value="sheik">
+							<div class="item-media"><i class="icon icon-form-checkbox"></i><i class="icon icon-sheik"></i></div>
+							<div class="item-inner">
+							  <div class="item-title">Sheik</div>
+							  <div class="item-after"></div>
+							</div>
+						</label>
+					</li>
+					<li>
+						<label class="label-checkbox item-content">
+							<input type="checkbox" name="shulk" value="shulk">
+							<div class="item-media"><i class="icon icon-form-checkbox"></i><i class="icon icon-shulk"></i></div>
+							<div class="item-inner">
+							  <div class="item-title">Shulk</div>
+							  <div class="item-after"></div>
+							</div>
+						</label>
+					</li>
+					<li>
+						<label class="label-checkbox item-content">
+							<input type="checkbox" name="sonic" value="sonic">
+							<div class="item-media"><i class="icon icon-form-checkbox"></i><i class="icon icon-sonic"></i></div>
+							<div class="item-inner">
+							  <div class="item-title">Sonic</div>
+							  <div class="item-after"></div>
+							</div>
+						</label>
+					</li>
+					<li>
+						<label class="label-checkbox item-content">
+							<input type="checkbox" name="toon-link" value="toon-link">
+							<div class="item-media"><i class="icon icon-form-checkbox"></i><i class="icon icon-toon-link"></i></div>
+							<div class="item-inner">
+							  <div class="item-title">Toon Link</div>
+							  <div class="item-after"></div>
+							</div>
+						</label>
+					</li>
+				  </ul>
+				</form>
+				
+				<div class="content-block-title">Super Mario - 3/20/2015</div>
+				<form id="super-mario-form" class="list-block store-data">
+				  <ul>
+					<li>
+						<label class="label-checkbox item-content">
+							<input type="checkbox" name="super-bowser" value="super-bowser">
+							<div class="item-media"><i class="icon icon-form-checkbox"></i><i class="icon icon-super-bowser"></i></div>
+							<div class="item-inner">
+							  <div class="item-title">Bowser</div>
+							  <div class="item-after"></div>
+							</div>
+						</label>
+					</li>
+					<li>
+						<label class="label-checkbox item-content">
+							<input type="checkbox" name="super-luigi" value="super-luigi">
+							<div class="item-media"><i class="icon icon-form-checkbox"></i><i class="icon icon-super-luigi"></i></div>
+							<div class="item-inner">
+							  <div class="item-title">Luigi</div>
+							  <div class="item-after"></div>
+							</div>
+						</label>
+					</li>
+					<li>
+						<label class="label-checkbox item-content">
+							<input type="checkbox" name="super-mario" value="super-mario">
+							<div class="item-media"><i class="icon icon-form-checkbox"></i><i class="icon icon-super-mario"></i></div>
+							<div class="item-inner">
+							  <div class="item-title">Mario</div>
+							  <div class="item-after"></div>
+							</div>
+						</label>
+					</li>
+					<li>
+						<label class="label-checkbox item-content">
+							<input type="checkbox" name="super-mario-gold" value="super-mario-gold">
+							<div class="item-media"><i class="icon icon-form-checkbox"></i><i class="icon icon-super-mario-gold"></i></div>
+							<div class="item-inner">
+							  <div class="item-title">Mario Gold Edition</div>
+							  <div class="item-after"></div>
+							</div>
+						</label>
+					</li>
+					<li>
+						<label class="label-checkbox item-content">
+							<input type="checkbox" name="super-mario-silver" value="super-mario-silver">
+							<div class="item-media"><i class="icon icon-form-checkbox"></i><i class="icon icon-super-mario-silver"></i></div>
+							<div class="item-inner">
+							  <div class="item-title">Mario Silver Edition</div>
+							  <div class="item-after"></div>
+							</div>
+						</label>
+					</li>
+					<li>
+						<label class="label-checkbox item-content">
+							<input type="checkbox" name="super-peach" value="super-peach">
+							<div class="item-media"><i class="icon icon-form-checkbox"></i><i class="icon icon-super-peach"></i></div>
+							<div class="item-inner">
+							  <div class="item-title">Peach</div>
+							  <div class="item-after"></div>
+							</div>
+						</label>
+					</li>
+					<li>
+						<label class="label-checkbox item-content">
+							<input type="checkbox" name="super-toad" value="super-toad">
+							<div class="item-media"><i class="icon icon-form-checkbox"></i><i class="icon icon-super-toad"></i></div>
+							<div class="item-inner">
+							  <div class="item-title">Toad</div>
+							  <div class="item-after"></div>
+							</div>
+						</label>
+					</li>
+					<li>
+						<label class="label-checkbox item-content">
+							<input type="checkbox" name="super-yoshi" value="super-yoshi">
+							<div class="item-media"><i class="icon icon-form-checkbox"></i><i class="icon icon-super-yoshi"></i></div>
+							<div class="item-inner">
+							  <div class="item-title">Yoshi</div>
+							  <div class="item-after"></div>
+							</div>
+						</label>
+					</li>
+				  </ul>
+				</form>
+
+				<div class="content-block-title">Super Smash Bros. Wave 4 - 5/29/2015</div>
+				<form id="super-smash-bros-wave-4-form" class="list-block store-data">
+				  <ul>
+					<li>
+						<label class="label-checkbox item-content">
+							<input type="checkbox" name="charizard" value="charizard">
+							<div class="item-media"><i class="icon icon-form-checkbox"></i><i class="icon icon-charizard"></i></div>
+							<div class="item-inner">
+							  <div class="item-title">Charizard</div>
+							  <div class="item-after"></div>
+							</div>
+						</label>
+					</li>
+					<li>
+						<label class="label-checkbox item-content">
+							<input type="checkbox" name="greninja" value="greninja">
+							<div class="item-media"><i class="icon icon-form-checkbox"></i><i class="icon icon-greninja"></i></div>
+							<div class="item-inner">
+							  <div class="item-title">Greninja</div>
+							  <div class="item-after"></div>
+							</div>
+						</label>
+					</li>
+					<li>
+						<label class="label-checkbox item-content">
+							<input type="checkbox" name="jigglypuff" value="jigglypuff">
+							<div class="item-media"><i class="icon icon-form-checkbox"></i><i class="icon icon-jigglypuff"></i></div>
+							<div class="item-inner">
+							  <div class="item-title">Jigglypuff</div>
+							  <div class="item-after"></div>
+							</div>
+						</label>
+					</li>
+					<li>
+						<label class="label-checkbox item-content">
+							<input type="checkbox" name="lucina" value="lucina">
+							<div class="item-media"><i class="icon icon-form-checkbox"></i><i class="icon icon-lucina"></i></div>
+							<div class="item-inner">
+							  <div class="item-title">Lucina</div>
+							  <div class="item-after"></div>
+							</div>
+						</label>
+					</li>
+					<li>
+						<label class="label-checkbox item-content">
+							<input type="checkbox" name="ness" value="ness">
+							<div class="item-media"><i class="icon icon-form-checkbox"></i><i class="icon icon-ness"></i></div>
+							<div class="item-inner">
+							  <div class="item-title">Ness</div>
+							  <div class="item-after"></div>
+							</div>
+						</label>
+					</li>
+					<li>
+						<label class="label-checkbox item-content">
+							<input type="checkbox" name="pac-man" value="pac-man">
+							<div class="item-media"><i class="icon icon-form-checkbox"></i><i class="icon icon-pac-man"></i></div>
+							<div class="item-inner">
+							  <div class="item-title">Pac-Man</div>
+							  <div class="item-after"></div>
+							</div>
+						</label>
+					</li>
+					<li>
+						<label class="label-checkbox item-content">
+							<input type="checkbox" name="robin" value="robin">
+							<div class="item-media"><i class="icon icon-form-checkbox"></i><i class="icon icon-robin"></i></div>
+							<div class="item-inner">
+							  <div class="item-title">Robin</div>
+							  <div class="item-after"></div>
+							</div>
+						</label>
+					</li>
+					<li>
+						<label class="label-checkbox item-content">
+							<input type="checkbox" name="wario" value="wario">
+							<div class="item-media"><i class="icon icon-form-checkbox"></i><i class="icon icon-wario"></i></div>
+							<div class="item-inner">
+							  <div class="item-title">Wario</div>
+							  <div class="item-after"></div>
+							</div>
+						</label>
+					</li>
+				  </ul>
+				</form>
+
+				<div class="content-block-title">Splatoon - 5/29/2015</div>
+				<form id="spaltoon-form" class="list-block store-data">
+				  <ul>
+					<li>
+						<label class="label-checkbox item-content">
+							<input type="checkbox" name="inkling-boy" value="inkling-boy">
+							<div class="item-media"><i class="icon icon-form-checkbox"></i><i class="icon icon-inkling-boy"></i></div>
+							<div class="item-inner">
+							  <div class="item-title">Inkling Boy</div>
+							  <div class="item-after"></div>
+							</div>
+						</label>
+					</li>
+					<li>
+						<label class="label-checkbox item-content">
+							<input type="checkbox" name="inkling-girl" value="inkling-girl">
+							<div class="item-media"><i class="icon icon-form-checkbox"></i><i class="icon icon-inkling-girl"></i></div>
+							<div class="item-inner">
+							  <div class="item-title">Inkling Girl</div>
+							  <div class="item-after"></div>
+							</div>
+						</label>
+					</li>
+					<li>
+						<label class="label-checkbox item-content">
+							<input type="checkbox" name="inkling-squid" value="inkling-squid">
+							<div class="item-media"><i class="icon icon-form-checkbox"></i><i class="icon icon-inkling-squid"></i></div>
+							<div class="item-inner">
+							  <div class="item-title">Inkling Squid</div>
+							  <div class="item-after"></div>
+							</div>
+						</label>
+					</li>
+				  </ul>
+				</form>
+
+				<div class="content-block-title">Super Smash Bros. Wave 5 - 9/2015</div>
+				<form id="super-smash-bros-wave-5-form" class="list-block store-data">
+				  <ul>
+					<li>
+						<label class="label-checkbox item-content">
+							<input type="checkbox" name="bowser-jr" value="bowser-jr">
+							<div class="item-media"><i class="icon icon-form-checkbox"></i><i class="icon icon-bowser-jr"></i></div>
+							<div class="item-inner">
+							  <div class="item-title">Bowser Jr.</div>
+							  <div class="item-after"></div>
+							</div>
+						</label>
+					</li>
+					<li>
+						<label class="label-checkbox item-content">
+							<input type="checkbox" name="dark-pit" value="dark-pit">
+							<div class="item-media"><i class="icon icon-form-checkbox"></i><i class="icon icon-dark-pit"></i></div>
+							<div class="item-inner">
+							  <div class="item-title">Dark Pit</div>
+							  <div class="item-after"></div>
+							</div>
+						</label>
+					</li>
+					<li>
+						<label class="label-checkbox item-content">
+							<input type="checkbox" name="dr-mario" value="dr-mario">
+							<div class="item-media"><i class="icon icon-form-checkbox"></i><i class="icon icon-dr-mario"></i></div>
+							<div class="item-inner">
+							  <div class="item-title">Dr. Mario</div>
+							  <div class="item-after"></div>
+							</div>
+						</label>
+					</li>
+					<li>
+						<label class="label-checkbox item-content">
+							<input type="checkbox" name="ganondorf" value="ganondorf">
+							<div class="item-media"><i class="icon icon-form-checkbox"></i><i class="icon icon-ganondorf"></i></div>
+							<div class="item-inner">
+							  <div class="item-title">Ganondorf</div>
+							  <div class="item-after"></div>
+							</div>
+						</label>
+					</li>
+					<li>
+						<label class="label-checkbox item-content">
+							<input type="checkbox" name="palutena" value="palutena">
+							<div class="item-media"><i class="icon icon-form-checkbox"></i><i class="icon icon-palutena"></i></div>
+							<div class="item-inner">
+							  <div class="item-title">Palutena</div>
+							  <div class="item-after"></div>
+							</div>
+						</label>
+					</li>
+					<li>
+						<label class="label-checkbox item-content">
+							<input type="checkbox" name="pikmin-olimar" value="pikmin-olimar">
+							<div class="item-media"><i class="icon icon-form-checkbox"></i><i class="icon icon-pikmin-olimar"></i></div>
+							<div class="item-inner">
+							  <div class="item-title">Pikmin & Olimar</div>
+							  <div class="item-after"></div>
+							</div>
+						</label>
+					</li>
+					<li>
+						<label class="label-checkbox item-content">
+							<input type="checkbox" name="zero-suit-samus" value="zero-suit-samus">
+							<div class="item-media"><i class="icon icon-form-checkbox"></i><i class="icon icon-zero-suit-samus"></i></div>
+							<div class="item-inner">
+							  <div class="item-title">Zero Suit Samus</div>
+							  <div class="item-after"></div>
+							</div>
+						</label>
+					</li>
+				  </ul>
+				</form>
+				
+			</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Path to Framework7 Library JS-->
+    <script type="text/javascript" src="js/framework7.min.js"></script>
+    <!-- Path to your app js-->
+    <script type="text/javascript" src="js/my-app.js"></script>
+  </body>
+</html>              
